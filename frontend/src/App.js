@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 import { Header, Footer } from './components/shared'
 import { Theme } from './config/Theme'
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider } from '@mui/material'
 import { CssBaseline } from '@mui/material';
 
 
