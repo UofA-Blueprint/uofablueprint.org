@@ -72,7 +72,7 @@ for (var i = 1; i < (valueObj.values.length + 1); i++) {
 function Value() {
     return (
         <main>
-            <Typography color="primary.dark" ml={(screen.width) / 4} fontSize={25} fontWeight="bold"> Our Values </Typography>
+            <Typography color="primary.dark" ml={30} fontSize={25} fontWeight="bold"> Our Values </Typography>
             {display}
         </main>
     )
