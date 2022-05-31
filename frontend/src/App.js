@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-
+import { createTheme } from '@mui/material/styles';
 import { Header, Footer } from './components/shared'
 import { Theme } from './config/Theme'
 import { ThemeProvider } from '@mui/material'
