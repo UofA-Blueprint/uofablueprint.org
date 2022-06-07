@@ -9,7 +9,7 @@ function StudentApply() {
             <Banner />
             <ApplyProcess />
             <Criteria />
-            <Faq />
+            <Faq name="fil" />
         </div>
     )
 }
