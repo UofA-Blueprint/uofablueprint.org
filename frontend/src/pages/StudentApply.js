@@ -13,7 +13,7 @@ function StudentApply() {
                 title="Students Application Process"
             />
             <Criteria />
-            <Faq />
+            <Faq name="fil" />
         </div>
     )
 }
