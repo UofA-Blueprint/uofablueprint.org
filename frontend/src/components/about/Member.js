@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './Header'
 import MemberInfo from './MemberInfo'
 import './about.css'
 
@@ -11,7 +10,7 @@ function Member() {
 
     return (
         <>
-            <Header text="Meet the Team"/>
+            <div className='header'>Meet the team</div>
 
             <div className='container'>
                 <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
