@@ -1,31 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './about.css'
+import { Avatar, Card, CardHeader, Grid, IconButton } from '@mui/material'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
-const MemberInfo = ({image, linkImage, link, name, position }) => {
+const MemberInfo = ({image, link, name, position }) => {
   return (
-    <div className='member-info'>
-        <img src={image} className="member-image"></img>
+    <>
+        <Grid container direction='column' justifyContent='center' alignItems='center'>
+            <Grid item>
+                <Avatar alt='No image' src={image} 
+                sx={
+                    {height: 150, width: 150}
+                }/>
+            </Grid>
+            
+            <Grid item>
+                <Card elevation={0}>
+                    <CardHeader 
 
-        <div className='member-container'>
-            <div className='member-info'>
-                <p style={{
-                    fontSize: '20px',
-                    margin: '0px'
-                }}>{name}</p>
-                
-                <p style={{
-                    fontSize: '15px',
-                    margin: '0px'
-                }}>{position}</p>
-            </div>
+                    title = {name}
 
-            <a href={link}>  
-                <img src={linkImage} className="link-image"></img> 
-            </a>
-        </div>
+                    subheader = {position}
 
-    </div>
+                    action = {
+                        <IconButton aria-label='settings'  href={link}> 
+                            <LinkedInIcon color='primary' fontSize='medium'
+                            sx={{
+                                color: 'black'
+                            }}/>
+                        </IconButton>
+                    }
+                    />
+                    
+                </Card>
+            </Grid>
+        </Grid>
+
+
+    </>
   )
 }
 

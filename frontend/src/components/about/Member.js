@@ -1,6 +1,6 @@
 import React from 'react'
 import MemberInfo from './MemberInfo'
-import './about.css'
+import { Grid, Typography } from '@mui/material';
 
 
 function Member() {
@@ -10,22 +10,35 @@ function Member() {
 
     return (
         <>
-            <div className='header'>Meet the team</div>
-
-            <div className='container'>
-                <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-                <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-                <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-                <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-
-            </div>
-
-            <div className='container'>
-            <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-            <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-            <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-            <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
-            </div>
+            <Typography align='center' variant='h4'>
+                Meet the team
+            </Typography>
+            <Grid container direction='row' justifyContent='space-evenly' alignItems='center'>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+                <Grid item xs={3}>
+                    <MemberInfo image={IMG_URI} linkImage={LINK_IMAGE} link={LINK} name="Name Surname" position="position"/>
+                </Grid>
+            </Grid>
 
         </>
     )
