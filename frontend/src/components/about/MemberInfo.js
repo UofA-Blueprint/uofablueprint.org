@@ -4,7 +4,7 @@ import { Avatar, Card, CardHeader, Grid, IconButton } from '@mui/material'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 const MemberInfo = ({image, link, name, position }) => {
-  return (
+    return (
     <>
         <Grid container direction='column' justifyContent='center' alignItems='center'>
             <Grid item>
