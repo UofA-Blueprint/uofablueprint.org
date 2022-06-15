@@ -18,6 +18,7 @@ const MemberInfo = ({image, link, name, position }) => {
                 <Card elevation={0}>
                     <CardHeader 
 
+                    titleTypographyProps={{fontSize: 20}}
                     title = {name}
 
                     subheader = {position}
@@ -29,6 +30,10 @@ const MemberInfo = ({image, link, name, position }) => {
                                 color: 'black'
                             }}/>
                         </IconButton>
+                    }
+
+                    sx={
+                        {textAlign: 'center'}
                     }
                     />
                     
