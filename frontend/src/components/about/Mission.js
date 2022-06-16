@@ -1,14 +1,15 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 import { Box } from '@mui/system';
+import { Theme } from '../../config/Theme';
 
 function Mission() {
     return (
         <Box sx={{
-            background: '#f6f6f6',
+            background: Theme.palette.secondary.light,
             textAlign: 'center'
         }}>
-            <Typography variant='h3' color='primary' sx={{
+            <Typography variant='h3' color={Theme.palette.primary.main} sx={{
                 p: 4,
                 fontWeight: 'medium'
             }}>
