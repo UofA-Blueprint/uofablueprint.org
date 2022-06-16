@@ -19,6 +19,9 @@ var theme = createTheme({
             dark: '#333333', //Dark grey
             contrastText: '#000',
         },
+        typography: {
+            
+        }
     },
 });
 /* eslint-enable no-unused-vars */
