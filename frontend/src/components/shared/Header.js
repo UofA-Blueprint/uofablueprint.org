@@ -1,13 +1,8 @@
+
 import React from 'react'
 
 function Header() {
-    return (
-        <div>
-            header placeholder
-        </div>
-
-
-    )
+    return <div>-header component placeholder-</div>
 }
 
 export default Header
