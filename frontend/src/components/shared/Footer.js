@@ -28,32 +28,38 @@ function Footer() {
                     }}>
                         <Box sx={{ mx: 5, justifyContent: "center" }}>
                             <Typography variant='subtitle1' color='primary.light' mb={2} mr={1} fontWeight='bold'> General </Typography>
-                            <Link href='/' underline="none">
+                            <Link href='/#banner' underline="none">
                                 <Typography variant='subtitle1' color='primary.light'> Home</Typography>
                             </Link>
-                            <Link href='/' underline="none">
-                                <Typography variant='subtitle1' color='primary.light'> General</Typography>
+                            <Link href='/about/#member' underline="none">
+                                <Typography variant='subtitle1' color='primary.light'> Team</Typography>
                             </Link>
-                            <Link href='/' underline="none">
+                            <Link href='/projects/#projects' underline="none">
                                 <Typography variant='subtitle1' color='primary.light'> Projects</Typography>
                             </Link>
                         </Box>
                         <Box sx={{ mx: 5 }}>
                             <Typography variant='subtitle1' color='primary.light' mb={2} fontWeight='bold'> For Students </Typography>
                             <Link href='/apply/students' underline="none">
-                                <Typography variant='subtitle1' color='primary.light'> About</Typography>
+                                <Typography variant='subtitle1' color='primary.light'> Apply</Typography>
                             </Link>
-                            <Link href='/apply/students' underline="none">
-                                <Typography variant='subtitle1' color='primary.light'> FAQ</Typography>
+                            <Link href='/apply/students/#process' underline="none">
+                                <Typography variant='subtitle1' color='primary.light'> Process</Typography>
+                            </Link>
+                            <Link href='/apply/students/#FAQ' underline="none">
+                                <Typography variant='subtitle1' color='primary.light'> FAQs</Typography>
                             </Link>
                         </Box>
                         <Box sx={{ mx: 5 }}>
                             <Typography variant='subtitle1' color='primary.light' mb={2} fontWeight='bold'> For Nonprofits </Typography>
                             <Link href='/apply/nonprofits' underline="none">
-                                <Typography variant='subtitle1' color='primary.light'> About</Typography>
+                                <Typography variant='subtitle1' color='primary.light'> Apply</Typography>
                             </Link>
-                            <Link href='/apply/nonprofits' underline="none">
-                                <Typography variant='subtitle1' color='primary.light'> FAQ</Typography>
+                            <Link href='/apply/nonprofits/#process' underline="none">
+                                <Typography variant='subtitle1' color='primary.light'> Process</Typography>
+                            </Link>
+                            <Link href='/apply/nonprofits/#FAQ' underline="none">
+                                <Typography variant='subtitle1' color='primary.light'> FAQs</Typography>
                             </Link>
                         </Box>
                         <Box sx={{ mx: 5 }}>

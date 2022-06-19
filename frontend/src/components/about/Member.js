@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Member() {
-    return <div>-member component placeholder-</div>
+    return <div id="member">-member component placeholder-</div>
 }
 
 export default Member
