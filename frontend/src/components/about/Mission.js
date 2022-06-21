@@ -7,18 +7,20 @@ function Mission() {
     return (
         <Box sx={{
             background: Theme.palette.secondary.light,
-            textAlign: 'center'
+            textAlign: 'center',
         }}>
             <Typography variant='h3' color={Theme.palette.primary.main} sx={{
                 p: 4,
-                fontWeight: 'medium'
+                fontWeight: 'bold'
             }}>
                 Our Mission Statement
             </Typography>
 
             <Typography variant='body1' sx={{
                 p: 4,
-                fontSize: 22
+                fontSize: 22,
+                width: 700,
+                mx: 'auto'
             }}>
                 To make beautiful engineering accessible and useful for those who create
                 communities and promote public welfare.
