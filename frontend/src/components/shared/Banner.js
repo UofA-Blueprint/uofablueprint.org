@@ -9,12 +9,13 @@ function Banner({header, body, buttonText, buttonLink}) {
     return (
         <Box sx={{
             background: Theme.palette.primary.dark,
-            color: Theme.palette.primary.light
+            color: Theme.palette.primary.light,
+            height: 300
         }}>
             <Typography variant='h4' sx={{
                 p: 2,
                 pl: 4,
-                fontWeight: 'medium'
+                fontWeight: 'bold'
             }}>
                 {header}
             </Typography>
@@ -23,7 +24,8 @@ function Banner({header, body, buttonText, buttonLink}) {
                 p: 2,
                 pl: 4,
                 fontSize: 20,
-                fontWeight: 'light'
+                fontWeight: 'medium',
+                width: 500
             }}>
                 {body}
             </Typography>

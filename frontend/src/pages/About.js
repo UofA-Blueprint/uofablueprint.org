@@ -9,7 +9,11 @@ function About() {
         <Grid container>
 
             <Grid item xs={12}>
-                <Banner />
+                <Banner 
+                    header='About Us' 
+                    body='Making technology accessible and useful for those who create communities.'
+                    buttonText='Learn more'
+                />
             </Grid>
 
             <Grid item xs={12}>
