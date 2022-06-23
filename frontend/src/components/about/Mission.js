@@ -9,14 +9,14 @@ function Mission() {
             background: Theme.palette.secondary.light,
             textAlign: 'center',
         }}>
-            <Typography variant='h3' color={Theme.palette.primary.main} sx={{
-                p: 4,
+            <Typography variant='h4' gutterBottom={true} color={Theme.palette.primary.main} sx={{
+                pt: 4,
                 fontWeight: 'bold'
             }}>
                 Our Mission Statement
             </Typography>
 
-            <Typography variant='body1' sx={{
+            <Typography variant='body1' color={Theme.palette.secondary.dark} sx={{
                 p: 4,
                 fontSize: 22,
                 width: 700,
