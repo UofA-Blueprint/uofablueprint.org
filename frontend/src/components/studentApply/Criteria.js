@@ -26,7 +26,7 @@ function Criteria() {
                             {criteria.title}
                             <Typography 
                             component = {"h2"}
-                            fontFamily={""} 
+                            fontFamily={"Roboto"} 
                             fontSize = {"24px"} 
                             fontWeight= {400} 
                             color={"#0B2538"}
