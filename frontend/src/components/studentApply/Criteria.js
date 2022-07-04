@@ -17,7 +17,7 @@ function Criteria() {
 
                     <Box width = "75%">
                         <div align={"left"}>
-                        <img src = {criteria.image} width = {"30%"} height = {"30%"} marginBottom = {"10%"}/>
+                        <img src = {criteria.image} width = {"30%"} height = {"30%"} marginbottom = {"10%"}/>
 
                         <Typography  //Sets h1 for he titles and h2 for the text contents
                         component = {"h1"} 
@@ -33,7 +33,7 @@ function Criteria() {
                         fontFamily={"Roboto"} 
                         fontSize = {"24px"}  
                         fontWeight= {400} 
-                        align = {"Left"}
+                        align = {"left"}
                         color={"#0B2538"}
                         >
                             {criteria.body}
