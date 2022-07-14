@@ -10,14 +10,18 @@ function Member() {
 
     return (
         <>
-            <Typography align='center' variant='h4'
-            sx={
-                {mb: 5}
-            }>
-                Meet the team
+            <Typography align='center' variant='h4' gutterBottom={true}
+            sx={{
+                mb: 10,
+                mt: 10
+            }}>
+                Meet the Team
             </Typography>
 
-            <Grid container direction='row' justifyContent='space-evenly' alignItems='center'>
+            <Grid container direction='row' justifyContent='space-evenly' alignItems='center'
+            sx={{
+                mb: 10
+            }}>
                 {
                 members.map(member => {
                     return (

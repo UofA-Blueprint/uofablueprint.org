@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Box } from '@mui/system'
 import React from 'react'
 import { Theme } from '../../config/Theme'
+import {HashLink} from 'react-router-hash-link'
 
 
 function Banner({header, body, buttonText, buttonLink}) {
@@ -30,17 +31,19 @@ function Banner({header, body, buttonText, buttonLink}) {
                 {body}
             </Typography>
 
-            <Button variant='outlined' size='small' href={buttonLink} target='_blank' rel='noopener noreferrer' sx={{
-                m: 2,
-                ml: 4,
-                color: Theme.palette.primary.light,
-                borderColor: Theme.palette.secondary.light,
-                "&:hover": {
-                    borderColor: Theme.palette.primary.light
-                },
-            }}>
-                {buttonText}
-            </Button>
+            <HashLink to={buttonLink} smooth> 
+                <Button variant='outlined' size='small' sx={{
+                    m: 2,
+                    ml: 4,
+                    color: Theme.palette.primary.light,
+                    borderColor: Theme.palette.secondary.light,
+                    "&:hover": {
+                        borderColor: Theme.palette.primary.light
+                    },
+                }}>
+                    {buttonText}
+                </Button>
+            </HashLink>
 
         </Box>
     )

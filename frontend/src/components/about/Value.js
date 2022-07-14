@@ -55,10 +55,11 @@ for (var i = 1; i < (valueObj.values.length + 1); i++) {
 function Value() {
     return (
         <main>
-            <Typography color="primary.dark" variant='h4' sx={{
+            <Typography color="primary.dark" variant='h4' gutterBottom={true} sx={{
                 p: 2,
                 pl: 4,
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                mb: 5
             }}> Our Values </Typography>
             {display}
         </main>
