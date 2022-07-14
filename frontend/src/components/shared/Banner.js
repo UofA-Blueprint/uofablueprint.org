@@ -5,8 +5,7 @@ import React from 'react'
 import { Theme } from '../../config/Theme'
 import {HashLink} from 'react-router-hash-link'
 
-
-function Banner({header, body, buttonText, buttonLink}) {
+function Banner({ header, body, buttonText, buttonLink }) {
     return (
         <Box sx={{
             background: Theme.palette.primary.dark,
@@ -49,13 +48,11 @@ function Banner({header, body, buttonText, buttonLink}) {
     )
 }
 
-
 Banner.propTypes = {
     header: PropTypes.string,
     body: PropTypes.string,
     buttonText: PropTypes.string,
-    buttonLink: PropTypes.string
+    buttonLink: PropTypes.string,
 }
-
 
 export default Banner

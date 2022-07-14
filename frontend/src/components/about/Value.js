@@ -49,7 +49,7 @@ for (var i = 1; i < (valueObj.values.length + 1); i++) {
         </Grid>
 
     </Grid>))
-
+    
     }
 
 function Value() {
@@ -61,6 +61,7 @@ function Value() {
                 fontWeight: 'bold',
                 mb: 5
             }}> Our Values </Typography>
+
             {display}
         </main>
     )
