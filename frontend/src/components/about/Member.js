@@ -10,20 +10,28 @@ function Member() {
 
     return (
         <>
-            <Typography align='center' variant='h4' gutterBottom={true}
-            sx={{
-                mb: 10,
-                mt: 10
-            }}>
+            <Typography
+                align="center"
+                variant="h4"
+                gutterBottom={true}
+                sx={{
+                    mb: 10,
+                    mt: 10,
+                }}
+            >
                 Meet the Team
             </Typography>
 
-            <Grid container direction='row' justifyContent='space-evenly' alignItems='center'
-            sx={{
-                mb: 10
-            }}>
-                {
-                members.map(member => {
+            <Grid
+                container
+                direction="row"
+                justifyContent="space-evenly"
+                alignItems="center"
+                sx={{
+                    mb: 10,
+                }}
+            >
+                {members.map((member) => {
                     return (
                         <Grid key={member.id} item xs={3}>
                             <MemberInfo
@@ -36,7 +44,7 @@ function Member() {
                     )
                 })}
             </Grid>
-        </div>
+        </>
     )
 }
 
