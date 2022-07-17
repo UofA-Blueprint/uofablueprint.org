@@ -1,10 +1,28 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import nonprofitCriteria from '../../data/nonprofitCriteria.json'
 import {Grid, Typography, Box} from '@mui/material'
+
+
+// Adds hook to adjust margins based on window size
+function useWindowSize (){
+    const [size, setSize] = useState([window.innerWidth]);
+
+    useEffect(() => {
+        const handleResize  = () => {
+            setSize([window.innerWidth]);
+        }
+        //Gets size in real time
+        window.addEventListener("resize", handleResize);
+
+    }, []);
+    return size
+}
+
 function Criteria() {
+    const width = useWindowSize()
     return (
         <div overflow = "hidden">
-            <Typography
+            <Typography //Styles title
             align = {"left"}
             component = {"h1"} 
             fontSize = {"48px"} 
@@ -13,17 +31,16 @@ function Criteria() {
             marginBottom = {"3%"}>
                 Decision Criteria
             </Typography>
-            <Grid container 
+            <Grid container  //Styles grid
              width = {"85%"}
              marginLeft = {"5%"}
-             align ="center"
-             columnSpacing ={3}>
+             align ="center">
                 {nonprofitCriteria.map((criteria, index) => { //Maps the criteria json to a grid with title and images
                     let columnMax = 12;
                     let columnAmount = 3;
                     let widthPercent = "75%";
                     let boxLeftMargin = "0%";
-                    let boxRightMargin = "0%"
+                    let boxRightMargin = "0%";
                     if (index >= 3){
                         columnAmount = 2;
                         widthPercent = "50%";
@@ -46,8 +63,8 @@ function Criteria() {
     
                             <Box width = {widthPercent}
                             align = {"center"}
-                            marginLeft = {boxLeftMargin}
-                            marginRight = {boxRightMargin}
+                            marginLeft = {width < 600 ? "0%" : boxLeftMargin} // Updates margins depending on window size
+                            marginRight = {width < 600 ? "0%" : boxRightMargin}
 
                             >
                                 <div>
@@ -64,7 +81,7 @@ function Criteria() {
                                 </Typography>
                                 </div>
                                 <Typography 
-                                component = {"h3"}
+                                component = {"h3"} //Renders paragraph text
                                 fontSize = {"24px"}  
                                 align = {"center"}
                                 color={"primary.dark"}
