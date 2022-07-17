@@ -15,6 +15,7 @@ function useWindowSize (){
         window.addEventListener("resize", handleResize);
 
     }, []);
+    //Returns window size
     return size
 }
 
@@ -38,13 +39,13 @@ function Criteria() {
                 {nonprofitCriteria.map((criteria, index) => { //Maps the criteria json to a grid with title and images
                     let columnMax = 12;
                     let columnAmount = 3;
-                    let widthPercent = "75%";
+                    let widthPercent = "75%"; //For the first row
                     let boxLeftMargin = "0%";
                     let boxRightMargin = "0%";
                     if (index >= 3){
                         columnAmount = 2;
                         widthPercent = "50%";
-                        if (index == 3) {
+                        if (index == 3) { //Changes margin of third and fourth boxes depending on size so stuff looks nice 
                             boxLeftMargin = "25%"
                         } else {
                             boxRightMargin = "25%"
@@ -63,7 +64,7 @@ function Criteria() {
     
                             <Box width = {widthPercent}
                             align = {"center"}
-                            marginLeft = {width < 600 ? "0%" : boxLeftMargin} // Updates margins depending on window size
+                            marginLeft = {width < 600 ? "0%" : boxLeftMargin} // Updates margins depending on window size, uses same parameters as mui to make everything work nice
                             marginRight = {width < 600 ? "0%" : boxRightMargin}
 
                             >
