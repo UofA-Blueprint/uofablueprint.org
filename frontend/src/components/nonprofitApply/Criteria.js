@@ -14,8 +14,7 @@ function Criteria() {
                 Decision Criteria
             </Typography>
             <Grid container 
-             align ="center"
-             width = "100%">
+             align ="center">
                 {nonprofitCriteria.map((criteria, index) => { //Maps the criteria json to a grid with title and images
                     let columnMax = 12;
                     let columnAmount = 3;
