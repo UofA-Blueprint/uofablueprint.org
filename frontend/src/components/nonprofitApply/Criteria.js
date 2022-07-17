@@ -5,23 +5,34 @@ function Criteria() {
     return (
         <div overflow = "hidden">
             <Typography
-            align = {"center"}
+            align = {"left"}
             component = {"h1"} 
             fontSize = {"48px"} 
             fontWeight ={"bold"}
-            marginLeft = {"3.5%"}
+            marginLeft = {"4%"}
             marginBottom = {"3%"}>
                 Decision Criteria
             </Typography>
             <Grid container 
-             align ="center">
+             width = {"85%"}
+             marginLeft = {"5%"}
+             align ="center"
+             columnSpacing ={3}>
                 {nonprofitCriteria.map((criteria, index) => { //Maps the criteria json to a grid with title and images
                     let columnMax = 12;
                     let columnAmount = 3;
-                    let widthPercent = "75%"
+                    let widthPercent = "75%";
+                    let boxLeftMargin = "0%";
+                    let boxRightMargin = "0%"
                     if (index >= 3){
                         columnAmount = 2;
-                        widthPercent = "48%";
+                        widthPercent = "50%";
+                        if (index == 3) {
+                            boxLeftMargin = "25%"
+                        } else {
+                            boxRightMargin = "25%"
+
+                        }
                     }
                     let ratio = columnMax /columnAmount;
 
@@ -29,14 +40,19 @@ function Criteria() {
                             // After 3 items remove
                             <Grid item xs = {12} sm = {6} lg = {ratio}
                             marginBottom = {"2%"}
-                            padding = {0}
                             overflow = {"hidden"}//Resizes the grid based on screen size
                             key = {criteria.title}
                             > 
     
-                            <Box width = {widthPercent} align = {"center"}>
+                            <Box width = {widthPercent}
+                            align = {"center"}
+                            marginLeft = {boxLeftMargin}
+                            marginRight = {boxRightMargin}
+
+                            >
                                 <div>
-                                <img src = {criteria.image} width = {"30%"} 
+                                <img src = {criteria.image} 
+                                width = {"30%"} 
                                 height = {"30%"} />
     
                                 <Typography  //Sets h1 for he titles and h2 for the text contents
