@@ -70,6 +70,7 @@ function Criteria() {
                             >
                                 <div>
                                 <img src = {criteria.image} 
+                                data-testid = {criteria.image}
                                 width = {"30%"} 
                                 height = {"30%"} />
     
