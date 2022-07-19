@@ -42,6 +42,7 @@ module.exports = {
                 { _id: req.params.memberId },
                 { $set: req.body }
             )
+            res.status(200).json({ message: 'Member Updated' })
             res.json(updatedmember)
         } catch (err) {
             res.json({ message: err })
