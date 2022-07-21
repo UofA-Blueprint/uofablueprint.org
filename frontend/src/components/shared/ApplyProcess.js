@@ -1,15 +1,14 @@
 import React from 'react'
-import ApplyProcess from '../../../src/data/nonprofitApplyProcess.json'
 import { Typography, Box } from '@mui/material'
 
 
-function ApplicationProcess() {
+function ApplicationProcess({ApplyProcessData}) {
     
     
     return <div>
 
 
-        {ApplyProcess.map(applyProcess => {
+        {ApplyProcessData.map(applyProcess => {
             return (
                    
                 <div key = {applyProcess.number}>
