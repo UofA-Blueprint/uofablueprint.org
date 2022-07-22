@@ -34,8 +34,11 @@ module.exports = {
             return res.json({ message: 'Project does not exist' })
 
         try {
-            const project = await Project.findByIdAndUpdate(req.params.projectId, req.body)
-            res.json({ message: "Project updated!" })
+            const project = await Project.findByIdAndUpdate(
+                req.params.projectId,
+                req.body
+            )
+            res.json({ message: 'Project updated!' })
         } catch (err) {
             res.json({ message: err })
         }
@@ -48,7 +51,9 @@ module.exports = {
             return res.json({ message: 'Project does not exist' })
 
         try {
-            const project = await Project.deleteOne(req.params.projectId)
+            const project = await Project.deleteOne({
+                _id: req.params.projectId,
+            })
             res.json(project)
         } catch (err) {
             res.json({ message: err })
