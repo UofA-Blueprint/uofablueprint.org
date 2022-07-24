@@ -14,6 +14,6 @@ export {
     ApplyProcess,
     Faq,
     ProjectCard,
-    ProjectList,
     UnderConstruction,
+    ProjectList,
 }
