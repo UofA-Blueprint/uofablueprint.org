@@ -1,5 +1,5 @@
 import React from 'react'
-
+import FaqData from '../data/NonprofitFaqData.json'
 import { Banner, ApplyProcess, Faq } from '../components/shared'
 import { Service, Criteria } from '../components/nonprofitApply'
 
@@ -10,7 +10,7 @@ function NonprofitApply() {
             <Service />
             <ApplyProcess />
             <Criteria />
-            <Faq />
+            <Faq FaqData={FaqData}/>
         </div>
     )
 }
