@@ -25,7 +25,9 @@ function Criteria() {
 
                     <Box width = "75%" marginLeft = {"12%"}>
                         <div align={"left"}>
-                        <img src = {criteria.image} width = {"30%"} 
+                        <img src = {criteria.image} 
+                        data-testid = {criteria.image}
+                        width = {"30%"} 
                         height = {"30%"} />
                         <Typography  //Sets h1 for he titles and h2 for the text contents
                         component = {"h2"} 
