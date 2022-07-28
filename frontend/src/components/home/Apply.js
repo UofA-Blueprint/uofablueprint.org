@@ -1,67 +1,98 @@
 import React from 'react'
 import { Typography, Box, Grid, Button } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 
 function Apply() {
-    return <div>
-        <Box sx={{ padding: "50px", }}>
-            <Typography variant='h2' sx={{ fontFamily: "Lato", fontWeight: "medium", textAlign: "center" }}>
-                Get Involved
-            </Typography>
-            <br></br>
-            <Grid container spacing={2}>
-                <Grid item xs={6}>
-                    <item>
-                        <Box sx={{ textAlign: "center" }}>
-                            <Box
-                                component="img"
-                                sx={{
-                                    height: 215,
-                                    width: 215,
+    return (
+        <>
+            <Box sx={{ padding: "50px"}}>
+                <Typography variant='h3' sx={{fontWeight: "medium", textAlign: "center", color: "primary.dark"}}>
+                    Get Involved
+                </Typography>
 
-                                }}
-                                alt="Students image"
-                                src="/assets/cap.png"
-                            />
-                            <Typography variant="h3" sx={{ fontFamily: "Lato", }}>
-                                For Students
-                            </Typography>
-                            <br></br>
-                            <Typography variant='h5' sx={{ fontFamily: "Lato", }}>
-                                Joining Blueprint is the perfect <br></br>way to use your skills to give<br></br> back to the community.
-                            </Typography>
-                            <br></br>
-                            <Button variant="outlined" sx={{ fontFamily: "Lato", color: "primary.main", borderColor: "primary.main" }}>Learn more</Button>
-                        </Box></item>
+                <Grid container spacing={2}>
+                    <Grid item xs={6}>
+                        <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    
+                            <Box sx={{ textAlign: "center"}}>
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 200,
+                                        width: 200,
+                                        mt: 7
+                                    }}
+                                    alt="Students image"
+                                    src="/assets/cap.png"
+                                />
+
+                                <Typography variant="h4" color="primary.dark" gutterBottom={true}>
+                                    For Students
+                                </Typography>
+
+                                <Box sx={{
+                                    width: 400
+                                }}>
+                                    <Typography variant='body1' mb={5} fontSize={20}>
+                                        Joining Blueprint is the perfect way to use your skills to give back to the community.
+                                    </Typography>
+                                </Box>
+
+                                <Link to='apply/students'>
+                                    <Button variant="outlined" sx={{color: "primary.main", borderColor: "primary.main" }}>
+                                        Learn more
+                                    </Button>
+                                </Link>
+
+                            </Box>
+                        </Box>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                        <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+                            
+                            <Box sx={{ textAlign: "center"}}>
+                                <Box
+                                    component="img"
+                                    sx={{
+                                        height: 200,
+                                        width: 200,
+                                        mt: 7
+                                    }}
+                                    alt="Nonprofit image"
+                                    src="/assets/office-building.png"
+                                />
+
+                                <Typography variant="h4" color="primary.dark" gutterBottom={true}>
+                                    For Nonprofits
+                                </Typography>
+
+                                <Box sx={{
+                                    width: 400
+                                }}>
+                                    <Typography variant='body1' mb={5} fontSize={20}>
+                                        Partner with Blueprint to build the application your organization needs.
+                                    </Typography>
+                                </Box>
+
+                                <Link to='apply/nonprofits'>
+                                    <Button variant="outlined" sx={{color: "primary.main", borderColor: "primary.main" }}>
+                                        Learn more
+                                    </Button>
+                                </Link>
+
+                            </Box>
+
+                        </Box>
+
+                    </Grid>
+
                 </Grid>
-                <Grid item xs={6}>
-                    <item>
 
-                        <Box sx={{ textAlign: "center" }}>
-                            <Box
-                                component="img"
-                                sx={{
-                                    height: 226,
-                                    width: 226,
-                                }}
-                                alt="Nonprofit image"
-                                src="/assets/office-building.png"
-                            />
-                            <Typography variant="h3" sx={{ fontFamily: "Lato", textAlign: "center" }}>
-                                For Nonprofits
-                            </Typography>
-                            <br></br>
-                            <Typography variant='h5' sx={{ fontFamily: "Lato", textAlign: "center" }}>
-                                Partner with Blueprint to <br></br>build the application your <br></br>organization needs.
-                            </Typography>
-                            <br></br>
-                            <Button variant="outlined" sx={{ fontFamily: "Lato", color: "primary.main", borderColor: "primary.main" }}>Learn more</Button>
-                        </Box></item>
-                </Grid>
-
-            </Grid>
-        </Box>
-    </div>
+            </Box>
+        </>
+    )
 }
 
 export default Apply
