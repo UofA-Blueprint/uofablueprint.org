@@ -14,17 +14,16 @@ function About() {
                 <Box sx={{
                     width: 600
                 }}>
-                    <Typography variant='body1' fontSize={20}>
-                        <p>
+                        <Typography variant='body1' fontSize={20}>
                             Blueprint is a student-run organization that creates technological
                             solutions for nonprofit organizations.
-                        </p>
-                        <p>
+                        </Typography>
+                        
+                        <Typography variant='body1' fontSize={20}>
                             Blueprint is a multinational organization founded in 2013 at the
                             University of California, Berkeley. Our UofA Chapter is the fourth
                             established chapter in Canada and the first one in Western Canada.
-                        </p>
-                    </Typography>
+                        </Typography>
                 </Box>
 
                 <Link to='about'>
