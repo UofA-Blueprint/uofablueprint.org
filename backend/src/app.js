@@ -6,7 +6,7 @@ const dotenv = require('dotenv')
 const membersRouter = require('./routes/members')
 const projectsRouter = require('./routes/projects')
 const studentStepsRouter = require('./routes/studentApplySteps')
-
+const uploadImageRouter = require('./routes/uploadImage')
 // general setup
 const app = express()
 
@@ -25,5 +25,6 @@ app.use(bodyParser.json())
 app.use('/members', membersRouter)
 app.use('/projects', projectsRouter)
 app.use('/studentsteps', studentStepsRouter)
+app.use('/image', uploadImageRouter)
 
 module.exports = app
