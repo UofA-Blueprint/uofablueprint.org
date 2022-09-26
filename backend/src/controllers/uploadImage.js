@@ -1,3 +1,4 @@
+
 module.exports = {
     postImage: async (req, res) => {
         console.log("Post made")
