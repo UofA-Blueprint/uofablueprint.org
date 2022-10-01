@@ -10,6 +10,7 @@ services:
     build: ./backend
     environment:
       - MONGODB_ADDR=mongodb://mongodb
+      - API_KEY=testkey
     restart: always
     ports:
       - "6060:6060"
