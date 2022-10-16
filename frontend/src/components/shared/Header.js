@@ -1,9 +1,28 @@
 import React from 'react'
-import { Box, Typography, Link } from '@mui/material'
+import { Box, Typography, Link,useMediaQuery,createTheme } from '@mui/material'
+
+//import { useTheme } from '@mui/styles';
+import Hamburger from './Hambuger'
 
 function Header() {
+    let themes=createTheme({
+        breakpoints: {
+          values: {
+            xs: 0,
+            sm: 600,
+            md: 900,
+            lg: 1200,
+            xl: 1536,
+          },
+        },
+      });
+    //const theme=useTheme()
+    //console.log(theme)
+    const isMatch =useMediaQuery(themes.breakpoints.down('md'))
+    console.log(isMatch)
     return (
         <main role="header">
+            
             <div>
                 <Box
                     sx={{
@@ -22,7 +41,23 @@ function Header() {
                     </Link>
 
                     {/* <Typography fontSize={20} color='primary.light' mt={0.5} ml={0.5}>blueprint</Typography> */}
-
+                    { isMatch ? (
+                                
+                                <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    flexGrow: 1,
+                                    flexWrap: 'wrap',
+                                    justifyContent: 'flex-end',
+                                    
+                                }}
+                                >
+                                <Hamburger/>
+                                </Box>
+                                
+                            
+                            ) :(
                     <Box
                         sx={{
                             display: 'flex',
@@ -33,6 +68,10 @@ function Header() {
                             mr: 10,
                         }}
                     >
+
+                        
+                        
+                
                         <Typography mx={2} my={1}>
                             <Link
                                 color="primary.light"
@@ -76,10 +115,20 @@ function Header() {
                                 For Nonprofits
                             </Link>
                         </Typography>
+                        
+                        
+                    
+
                     </Box>
+                            )}
+
                 </Box>
+               
             </div>
+            
         </main>
+        
+        
     )
 }
 
