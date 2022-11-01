@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import {Drawer,IconButton,List,ListItemButton,ListItemIcon,ListItemText} from "@mui/material";
+import {Drawer,IconButton,List,Typography,Link} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const pages=["About us","Projects","For Students","For Nonprofits"]
 const Hamburger =()=>{
     const[openDrawer,setOpenDrawer]=useState(false)
     return (
@@ -12,16 +11,56 @@ const Hamburger =()=>{
             anchor="right"
             open={openDrawer}
             onClose={()=> setOpenDrawer(false)}>
+                
                 <List>
-                    {pages.map((page ,index)=>(
-                    <ListItemButton key={index}>
-                        <ListItemIcon>
-                            <ListItemText>{page}</ListItemText>
-                        </ListItemIcon>
-                    </ListItemButton>
-                    ))}
+                    <Typography mx={2} my={1}>
+                            <Link
+                                color="Black"
+                                fontWeight="bold"
+                                href="/about"
+                                underline="none"
+                            >
+                                {' '}
+                                About Us
+                            </Link>
+                        </Typography>
+                        <Typography mx={2} my={1}>
+                            <Link
+                                color="Black"
+                                fontWeight="bold"
+                                href="/projects"
+                                underline="none"
+                            >
+                                {' '}
+                                Projects
+                            </Link>
+                        </Typography>
+                        <Typography mx={2} my={1}>
+                            <Link
+                                color="Black"
+                                fontWeight="bold"
+                                href="/apply/students"
+                                underline="none"
+                            >
+                                {' '}
+                                For Students
+                            </Link>
+                        </Typography>
+                        <Typography mx={2} my={1}>
+                            <Link
+                                color="Black"
+                                fontWeight="bold"
+                                href="/apply/nonprofits"
+                                underline="none"
+                            >
+                                For Nonprofits
+                            </Link>
+                        </Typography>
                 </List>
+                
             </Drawer>
+                                
+                            
             <IconButton onClick={()=> setOpenDrawer(!openDrawer)}>
                 <MenuIcon style={{ color: 'white' }}/>
             </IconButton>
@@ -30,3 +69,4 @@ const Hamburger =()=>{
 };
 
 export default Hamburger;
+
