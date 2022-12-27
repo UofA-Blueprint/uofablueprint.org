@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import React from 'react'
 import { Box } from '@mui/material'
 import { Button } from '@mui/material'
+//import { AppBar} from  '@mui/material'
 import { HashLink } from 'react-router-hash-link'
 
 function Banner() {
