@@ -6,6 +6,13 @@ export default [
         id: 1,
     },
     {
+        name: 'Afraz Khan',
+        position: 'Project Developer',
+        linkedin: 'https://www.linkedin.com/in/afraz-khan-434903209',
+        id: 120,
+        image: 'https://media.licdn.com/dms/image/D5603AQGf8h8MhJN9Hg/profile-displayphoto-shrink_400_400/0/1668307144809?e=1692230400&v=beta&t=9olNHsSpsa3FIWjWByZhNzbshY-xSQGh2pyao97ZRqg'
+    },
+    {
         name: 'Aaron Boyd',
         position: 'Project Developer',
         linkedin: 'https://www.linkedin.com/in/aaron-boyd-7a972b236',
