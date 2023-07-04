@@ -1,6 +1,5 @@
 const studentSteps = require('../models/studentApplySteps.js')
 
-
 module.exports = {
     getAll: async (req, res) => {
         try {
